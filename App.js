@@ -46,7 +46,7 @@ function firstScreenStack({ navigation }) {
         name="Home"
         component={Home}
         options={{
-          title: "Welcome Location", //Set Header Title
+          title: "Welcome Location", //Set Header title
           headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
           headerStyle: {
             backgroundColor: "#000000e0", //Set Header color
@@ -83,6 +83,25 @@ function secondScreenStack({ navigation }) {
           title: "Currence Converter", //Set Header Title
         }}
       />
+    </Stack.Navigator>
+  );
+}
+
+function thirddScreenStack({ navigation }) {
+  return (
+    <Stack.Navigator
+      initialRouteName="Weather"
+      screenOptions={{
+        headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
+        headerStyle: {
+          backgroundColor: "#000000e0", //Set Header color
+        },
+        headerTintColor: "#fff", //Set Header text color
+        headerTitleStyle: {
+          fontWeight: "bold", //Set Header text style
+        },
+      }}
+    >
       <Stack.Screen
         name="Weather"
         component={Weather}
@@ -99,13 +118,14 @@ function App() {
     <NavigationContainer>
       <Drawer.Navigator
         drawerContentOptions={{
-          activeTintColor: "#3471fe8a",
+          activeTintColor: "#000000",
           itemStyle: { marginVertical: 5 },
         }}
         drawerContent={(props) => <CustomSidebarMenu {...props} />}
       >
         <Drawer.Screen name="Home" options={{ drawerLabel: "Welcome Location" }} component={firstScreenStack} />
         <Drawer.Screen name="Currencyconverter" options={{ drawerLabel: "Currency converter" }} component={secondScreenStack} />
+        <Drawer.Screen name="Weather" options={{ drawerLabel: "Weather" }} component={thirddScreenStack} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

@@ -4,7 +4,7 @@ import { SafeAreaView, View, StyleSheet, Image, Text, Linking } from "react-nati
 import { DrawerContentScrollView, DrawerItemList, DrawerItem } from "@react-navigation/drawer";
 
 const CustomSidebarMenu = (props) => {
-  const BASE_PATH = "../images/";
+  const BASE_PATH = "../images";
   const proileImage = "icon.png";
 
   return (
