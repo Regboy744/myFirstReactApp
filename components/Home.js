@@ -33,7 +33,7 @@ class Home extends Component {
   }
 
   reverseGeoCoordinates() {
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.latitude},${this.state.longitude}&key=AIzaSyCO99I9kCQHN1J9O4F3IjrhuQCl8MIkJ7k`)
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.latitude},${this.state.longitude}&key=AIzaSyCO99I9)
       .then((response) => response.json())
       .then((data) =>
         this.setState({
