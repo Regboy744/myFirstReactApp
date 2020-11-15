@@ -67,14 +67,12 @@ class Home extends Component {
   }
 
   render() {
-    let latitude = this.state.latitude;
-
     return (
       <ImageBackground source={require("../images/bg.jpg")} blurRadius={1} style={styles.container}>
         <View style={styles.overlay}>
           <Image source={require("../images/marker.png")} style={{ width: 100, height: 100 }} />
           <Text style={styles.heading1}>Welcome Page!</Text>
-          <Text style={styles.heading3}>Latitude:{latitude}</Text>
+          <Text style={styles.heading3}>Latitude:{this.state.latitude}</Text>
           <Text style={styles.heading3}>Longitude:{this.state.longitude}</Text>
           <Text style={styles.heading2}>{this.state.userAddress}</Text>
         </View>
